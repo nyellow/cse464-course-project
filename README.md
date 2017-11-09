@@ -8,9 +8,7 @@ Your team is responsible for building the application base on the specifications
 
 #### 1. Car Selection – each team member is to select 3 cars from the Kelley Blue Book site (https://www.kbb.com).   
 - You can choose from the following category: SUV, Crossover, Sedan, Truck, Coupe, Hybrid, and Van/Minivan. 
-
 - You must use all categories.
-
 - No cars can be repeated (therefore, do not choose the same make and model as your teammate).  
 
 #### 2. Cars are to be grouped into one of the 4 hierarchical structure – Economy, Intermediate, Standard, and Van.  
