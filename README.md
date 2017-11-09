@@ -55,7 +55,7 @@ Using integration testing, perform testing on the application.   You will need t
 
 Project Timeline: 
 
-#### Part 1 is due on Saturday, 11/11/2017 (300 Points)
+#### Part 1 is due on Saturday, 11/12/2017 (300 Points)
 
 -	Completed project 
 -	Source code in a zip file
