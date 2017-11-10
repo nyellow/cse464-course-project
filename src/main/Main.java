@@ -1,10 +1,10 @@
-package main;
+
 
 import java.util.*;
 
 public class Main {
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
         // The chosen cars information will be put here
         // We all choose 3 cars, and there are 5 of us so 15 cars to be made
         Car[] cars = new Car[15];
@@ -25,9 +25,9 @@ public class Main {
         cars[8] = new Car(Car.Category.Economy, "carMake", "carModel", 44);
 
         // David's cars
-        cars[9] = new Car(Car.Category.Economy, "carMake", "carModel", 44);
-        cars[10] = new Car(Car.Category.Economy, "carMake", "carModel", 44);
-        cars[11] = new Car(Car.Category.Economy, "carMake", "carModel", 44);
+        cars[9] = new Car(Car.Category.Economy, "Honda", "Civic", 22);
+        cars[10] = new Car(Car.Category.Intermediate, "Chevrolet", "Cruze", 27);
+        cars[11] = new Car(Car.Category.Standard, "Mazda", "Cx9", 23);
 
         // Nathan's cars
         cars[12] = new Car(Car.Category.Economy, "carMake", "carModel", 44);
@@ -44,10 +44,17 @@ public class Main {
         System.out.println("Approximate mileage for trip: ");
         int mileage = input.nextInt();
 
-        // Quick error check, not sure if needed
-        if (passengers > 7 || passengers < 0 || rentalDays < 0) {
-            System.out.println("Invalid input");
-            return;
+        // Loop while incorrect input until correct one is found
+        while (passengers > 7 || passengers < 0 || rentalDays < 0 || mileage < 0) {
+            System.out.println("\n\nInvalid input Try again\n");
+           
+            System.out.println("Number of passengers: ");
+            passengers = input.nextInt();
+            System.out.println("Number of rental days: ");
+            rentalDays= input.nextInt();
+            System.out.println("Approximate mileage for trip: ");
+            mileage = input.nextInt();
+            
         }
 
         // Calculate cost for each car
@@ -100,7 +107,7 @@ public class Main {
             System.out.printf("\nCar make: %s\n" +
                             "Car model: %s\n" +
                             "Passengers: %d\n" +
-                            "Total cost: %d\n\n",
+                            "Total cost: %f\n\n",
                             obj.carMake, obj.carModel, obj.carPassengers, obj.totalCost);
         }
     }

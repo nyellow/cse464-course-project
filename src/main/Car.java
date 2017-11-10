@@ -1,4 +1,4 @@
-package main;
+
 
 import java.util.Comparator;
 
@@ -55,5 +55,40 @@ public class Car {
 
     public void calculateTotalCost(int rentalDays, int mileage) {
         totalCost = rentalDays * perDayCost +  mileage / carMPG * gasCost;
+        
+        // if the car is a Honda add a 10% rental fee to it
+        if (this.carMake.equals("Honda")) 
+        {
+        	totalCost = totalCost + (totalCost * .10);
+        }
+        
+        // if the car is an American brand add a 5% fee
+        else if(this.carMake.equals("Ford") || this.carMake.equals("Chevrolet") || this.carMake.equals("Chrysler")
+        		|| this.carMake.equals("Dodge") || this.carMake.equals("GMC"))
+        {
+        	totalCost = totalCost + (totalCost * .05);
+        			
+        }
+        
+        // give a free day for every 5 days rented out 
+        if(this.carType == Category.Intermediate || this.carType == Category.Standard) {
+        	
+        	int costOfaDay = 0; 
+        	
+        	// determine the cost of renting for renting for one day by determining car category.
+        	if(this.carType == Category.Intermediate) {
+        		costOfaDay = 50; 
+        	}
+        	else {
+        		costOfaDay = 55;
+        	}
+        	
+        	// divide total rental days by 5 giving the amount of 5 day intervals during the rental period
+        	// multiply this by the cost of each day to get the discount quantity.
+        	int discount = (int)(rentalDays/5) * costOfaDay;
+        	
+        	totalCost = totalCost - discount; 
+        	
+        }
     }
 }
