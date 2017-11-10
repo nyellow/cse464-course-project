@@ -9,7 +9,14 @@ public class Car {
     }
 
     public enum Category {
-        Economy, Intermediate, Standard, Van
+        Economy, Intermediate, Standard, Van;
+    	
+    		
+    }
+    
+    public enum VehicleType{
+    		COUPE, SEDAN, HYBRID, TRUCK, CROSSOVER, SUV, 
+    		VAN, MINIVAN;
     }
 
     final int ECON_COST = 45, INTERN_COST = 50, STAND_COST = 55, VAN_COST = 70;
@@ -23,8 +30,10 @@ public class Car {
     String carMake, carModel;
     Comfort comfort;
     Category carType;
+    VehicleType vehicleType;
 
-    public Car(Category carType, String carMake, String carModel, double carMPG) {
+    public Car(Category carType, VehicleType vehicleType, String carMake, String carModel, double carMPG) {
+    		this.vehicleType = vehicleType;
         this.carType = carType;
         this.carMake = carMake;
         this.carModel = carModel;
@@ -56,8 +65,11 @@ public class Car {
     public void calculateTotalCost(int rentalDays, int mileage) {
         totalCost = rentalDays * perDayCost +  mileage / carMPG * gasCost;
         
-        // if the car is a Honda add a 10% rental fee to it
-        if (this.carMake.equals("Honda")) 
+        // if the car is a Honda sedan, suv, or hybrid add a 10% rental fee to it
+        if ( (this.carMake.equals("Honda")) && 
+        		 (this.vehicleType == VehicleType.HYBRID 
+        		  || this.vehicleType == VehicleType.SEDAN 
+        		  || this.vehicleType == VehicleType.SUV))
         {
         	totalCost = totalCost + (totalCost * .10);
         }
@@ -70,22 +82,13 @@ public class Car {
         			
         }
         
-        // give a free day for every 5 days rented out 
+        // give a free day for every 5 days rented out on sixth day if car type is the following
         if(this.carType == Category.Intermediate || this.carType == Category.Standard) {
         	
-        	int costOfaDay = 0; 
         	
-        	// determine the cost of renting for renting for one day by determining car category.
-        	if(this.carType == Category.Intermediate) {
-        		costOfaDay = 50; 
-        	}
-        	else {
-        		costOfaDay = 55;
-        	}
-        	
-        	// divide total rental days by 5 giving the amount of 5 day intervals during the rental period
+        	// divide total rental days by 6 giving the amount of 6 day intervals during the rental period
         	// multiply this by the cost of each day to get the discount quantity.
-        	int discount = (int)(rentalDays/5) * costOfaDay;
+        	int discount = (int)(rentalDays/6) * perDayCost;
         	
         	totalCost = totalCost - discount; 
         	

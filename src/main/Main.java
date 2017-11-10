@@ -10,29 +10,29 @@ public class Main {
         Car[] cars = new Car[15];
 
         // Nanqiao's cars
-        cars[0] = new Car(Car.Category.Economy, "carMake", "carModel", 44);
-        cars[1] = new Car(Car.Category.Economy, "carMake", "carModel", 44);
-        cars[2] = new Car(Car.Category.Economy, "carMake", "carModel", 44);
+        cars[0] = new Car(Car.Category.Economy, Car.VehicleType.COUPE, "carMake", "carModel", 44);
+        cars[1] = new Car(Car.Category.Economy, Car.VehicleType.COUPE, "carMake", "carModel", 44);
+        cars[2] = new Car(Car.Category.Economy, Car.VehicleType.COUPE, "carMake", "carModel", 44);
 
         // Jingyi's cars
-        cars[3] = new Car(Car.Category.Economy, "carMake", "carModel", 44);
-        cars[4] = new Car(Car.Category.Economy, "carMake", "carModel", 44);
-        cars[5] = new Car(Car.Category.Economy, "carMake", "carModel", 44);
+        cars[3] = new Car(Car.Category.Economy, Car.VehicleType.COUPE, "carMake", "carModel", 44);
+        cars[4] = new Car(Car.Category.Economy, Car.VehicleType.COUPE,"carMake", "carModel", 44);
+        cars[5] = new Car(Car.Category.Economy, Car.VehicleType.COUPE,"carMake", "carModel", 44);
 
         // Junhao's cars
-        cars[6] = new Car(Car.Category.Economy, "carMake", "carModel", 44);
-        cars[7] = new Car(Car.Category.Economy, "carMake", "carModel", 44);
-        cars[8] = new Car(Car.Category.Economy, "carMake", "carModel", 44);
+        cars[6] = new Car(Car.Category.Economy, Car.VehicleType.COUPE,"carMake", "carModel", 44);
+        cars[7] = new Car(Car.Category.Economy, Car.VehicleType.COUPE,"carMake", "carModel", 44);
+        cars[8] = new Car(Car.Category.Economy, Car.VehicleType.COUPE,"carMake", "carModel", 44);
 
         // David's cars
-        cars[9] = new Car(Car.Category.Economy, "Honda", "Civic", 22);
-        cars[10] = new Car(Car.Category.Intermediate, "Chevrolet", "Cruze", 27);
-        cars[11] = new Car(Car.Category.Standard, "Mazda", "Cx9", 23);
+        cars[9] = new Car(Car.Category.Economy, Car.VehicleType.COUPE,"Honda", "Civic", 22);
+        cars[10] = new Car(Car.Category.Intermediate, Car.VehicleType.SEDAN,"Chevrolet", "Cruze", 27);
+        cars[11] = new Car(Car.Category.Standard, Car.VehicleType.CROSSOVER, "Mazda", "Cx9", 23);
 
         // Nathan's cars
-        cars[12] = new Car(Car.Category.Economy, "carMake", "carModel", 44);
-        cars[13] = new Car(Car.Category.Economy, "carMake", "carModel", 44);
-        cars[14] = new Car(Car.Category.Economy, "carMake", "carModel", 44);
+        cars[12] = new Car(Car.Category.Economy, Car.VehicleType.COUPE,"carMake", "carModel", 44);
+        cars[13] = new Car(Car.Category.Economy, Car.VehicleType.COUPE,"carMake", "carModel", 44);
+        cars[14] = new Car(Car.Category.Economy, Car.VehicleType.COUPE,"carMake", "carModel", 44);
 
         // Get user input
         Scanner input = new Scanner(System.in);
