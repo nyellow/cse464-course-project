@@ -94,4 +94,24 @@ public class Car {
         	
         }
     }
+    
+    
+    
+      
+    //Calculate Mileage cost
+    public  int mileagecost(int mileage1, double MPG){
+      	int mileagecost1 = 0;
+      	double gascost=2.25;
+      	mileagecost1=(int) (mileage1 / MPG * 2.25);
+      	
+      	
+      	
+      	return mileagecost1;
+      	
+      	
+      }
+    
+    
+    
+    
 }
