@@ -10,9 +10,9 @@ public class Main {
         Car[] cars = new Car[15];
 
         // Nanqiao's cars
-        cars[0] = new Car(Car.Category.Economy, Car.VehicleType.COUPE, "carMake", "carModel", 44);
-        cars[1] = new Car(Car.Category.Economy, Car.VehicleType.COUPE, "carMake", "carModel", 44);
-        cars[2] = new Car(Car.Category.Economy, Car.VehicleType.COUPE, "carMake", "carModel", 44);
+        cars[0] = new Car(Car.Category.Economy, Car.VehicleType.SEDAN, "Nissan", "Sentra", 21);
+        cars[1] = new Car(Car.Category.Intermediate, Car.VehicleType.COUPE, "Toyota", "86", 26);
+        cars[2] = new Car(Car.Category.Standard, Car.VehicleType.SUV, "GMC", "Yukon", 32);
 
         // Jingyi's cars
         cars[3] = new Car(Car.Category.Economy, Car.VehicleType.COUPE, "carMake", "carModel", 44);
