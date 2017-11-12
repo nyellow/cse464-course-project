@@ -20,9 +20,9 @@ public class Main {
         cars[5] = new Car(Car.Category.Van, Car.VehicleType.VAN,"Chrysler", "Town&Country", 20);
 
         // Junhao's cars
-        cars[6] = new Car(Car.Category.Economy, Car.VehicleType.COUPE,"carMake", "carModel", 44);
-        cars[7] = new Car(Car.Category.Economy, Car.VehicleType.COUPE,"carMake", "carModel", 44);
-        cars[8] = new Car(Car.Category.Economy, Car.VehicleType.COUPE,"carMake", "carModel", 44);
+        cars[6] = new Car(Car.Category.Economy, Car.VehicleType.SEDAN, "Nissan", "Sentra", 42);
+        cars[7] = new Car(Car.Category.Intermediate, Car.VehicleType.COUPE,"Chevrolet", "Camaro", 40);
+        cars[8] = new Car(Car.Category.Economy, Car.VehicleType.VAN,"Honda", " RTL", 44);
 
         // David's cars
         cars[9] = new Car(Car.Category.Economy, Car.VehicleType.COUPE,"Honda", "Civic", 22);
