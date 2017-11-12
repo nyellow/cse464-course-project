@@ -10,8 +10,8 @@ public class Main {
         Car[] cars = new Car[15];
 
         // Nanqiao's cars
-        cars[0] = new Car(Car.Category.Economy, Car.VehicleType.SEDAN, "Nissan", "Sentra", 21);
-        cars[1] = new Car(Car.Category.Intermediate, Car.VehicleType.COUPE, "Ford", "MustangSpecs", 20);
+        cars[0] = new Car(Car.Category.Economy, Car.VehicleType.SEDAN, "Nissan", "Sentra", 33);
+        cars[1] = new Car(Car.Category.Intermediate, Car.VehicleType.COUPE, "Ford", "Mustang", 20);
         cars[2] = new Car(Car.Category.Standard, Car.VehicleType.SUV, "GMC", "Yukon", 32);
 
         // Jingyi's cars
@@ -20,9 +20,9 @@ public class Main {
         cars[5] = new Car(Car.Category.Van, Car.VehicleType.VAN,"Chrysler", "Town&Country", 20);
 
         // Junhao's cars
-        cars[6] = new Car(Car.Category.Economy, Car.VehicleType.SEDAN, "Nissan", "Sentra", 42);
+        cars[6] = new Car(Car.Category.Economy, Car.VehicleType.SEDAN, "Nissan", "Versa", 37);
         cars[7] = new Car(Car.Category.Intermediate, Car.VehicleType.COUPE,"Chevrolet", "Camaro", 40);
-        cars[8] = new Car(Car.Category.Economy, Car.VehicleType.VAN,"Honda", " RTL", 44);
+        cars[8] = new Car(Car.Category.Economy, Car.VehicleType.VAN,"Honda", "Ridgeline", 44);
 
         // David's cars
         cars[9] = new Car(Car.Category.Economy, Car.VehicleType.COUPE,"Honda", "Civic", 22);
@@ -30,9 +30,9 @@ public class Main {
         cars[11] = new Car(Car.Category.Standard, Car.VehicleType.CROSSOVER, "Ford", "Edge", 23);
 
         // Nathan's cars
-        cars[12] = new Car(Car.Category.Economy, Car.VehicleType.COUPE,"carMake", "carModel", 44);
-        cars[13] = new Car(Car.Category.Economy, Car.VehicleType.COUPE,"carMake", "carModel", 44);
-        cars[14] = new Car(Car.Category.Economy, Car.VehicleType.COUPE,"carMake", "carModel", 44);
+        cars[12] = new Car(Car.Category.Standard, Car.VehicleType.CROSSOVER,"Ford", "Escape", 26);
+        cars[13] = new Car(Car.Category.Standard, Car.VehicleType.TRUCK,"Chevrolet", "Silverado", 20);
+        cars[14] = new Car(Car.Category.Economy, Car.VehicleType.HYBRID,"Kia", "Optima", 43);
 
         // Get user input
         Scanner input = new Scanner(System.in);
