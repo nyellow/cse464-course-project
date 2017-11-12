@@ -11,13 +11,13 @@ public class Main {
 
         // Nanqiao's cars
         cars[0] = new Car(Car.Category.Economy, Car.VehicleType.SEDAN, "Nissan", "Sentra", 21);
-        cars[1] = new Car(Car.Category.Intermediate, Car.VehicleType.COUPE, "Toyota", "86", 26);
+        cars[1] = new Car(Car.Category.Intermediate, Car.VehicleType.COUPE, "Ford", "MustangSpecs", 20);
         cars[2] = new Car(Car.Category.Standard, Car.VehicleType.SUV, "GMC", "Yukon", 32);
 
         // Jingyi's cars
-        cars[3] = new Car(Car.Category.Economy, Car.VehicleType.COUPE, "carMake", "carModel", 44);
-        cars[4] = new Car(Car.Category.Economy, Car.VehicleType.COUPE,"carMake", "carModel", 44);
-        cars[5] = new Car(Car.Category.Economy, Car.VehicleType.COUPE,"carMake", "carModel", 44);
+        cars[3] = new Car(Car.Category.Standard, Car.VehicleType.TRUCK, "Ford", "F150", 20);
+        cars[4] = new Car(Car.Category.Intermediate, Car.VehicleType.HYBRID,"Ford", "Fusion", 42);
+        cars[5] = new Car(Car.Category.Van, Car.VehicleType.VAN,"Chrysler", "Town&Country", 20);
 
         // Junhao's cars
         cars[6] = new Car(Car.Category.Economy, Car.VehicleType.COUPE,"carMake", "carModel", 44);
@@ -27,7 +27,7 @@ public class Main {
         // David's cars
         cars[9] = new Car(Car.Category.Economy, Car.VehicleType.COUPE,"Honda", "Civic", 22);
         cars[10] = new Car(Car.Category.Intermediate, Car.VehicleType.SEDAN,"Chevrolet", "Cruze", 27);
-        cars[11] = new Car(Car.Category.Standard, Car.VehicleType.CROSSOVER, "Mazda", "Cx9", 23);
+        cars[11] = new Car(Car.Category.Standard, Car.VehicleType.CROSSOVER, "Ford", "Edge", 23);
 
         // Nathan's cars
         cars[12] = new Car(Car.Category.Economy, Car.VehicleType.COUPE,"carMake", "carModel", 44);
