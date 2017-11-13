@@ -1,5 +1,3 @@
-
-
 import java.util.*;
 
 public class Main {
@@ -47,57 +45,52 @@ public class Main {
         // Loop while incorrect input until correct one is found
         while (passengers > 7 || passengers < 0 || rentalDays < 0 || mileage < 0) {
             System.out.println("\n\nInvalid input Try again\n");
-           
             System.out.println("Number of passengers: ");
             passengers = input.nextInt();
             System.out.println("Number of rental days: ");
             rentalDays= input.nextInt();
             System.out.println("Approximate mileage for trip: ");
             mileage = input.nextInt();
-            
         }
 
-        // Calculate cost for each car
-        for (Car obj : cars) {
-            obj.calculateTotalCost(rentalDays, mileage);
-        }
-
-        // Now sort our cars by cost
-        Arrays.sort(cars, new Comparator<Car>() {
-            // Sort in ascending order by cost
-            public int compare(Car a, Car b) {
-                double diff = a.totalCost - b.totalCost;
-                if (diff < 0) return -1;
-                if (diff > 0) return 1;
-                return 0;
-            }
-        });
-
-        // We only care about the lowest cost car. However, there
-        //  could be multiple cars with the lowest cost. We should
-        //  make an array list with the lowest cost car(s)
+        // Put all cars that meet passenger requirement into an array list
         ArrayList<Car> carsList = new ArrayList<Car>();
-        double prevCarCost = cars[0].totalCost;
         for (Car obj : cars) {
-            if (prevCarCost == obj.totalCost) {
+            if (obj.carPassengers >= passengers) {
                 carsList.add(obj);
             }
         }
 
-        // Now sort the lowest cost cars by comfort
-        Collections.sort(carsList, new Comparator<Car>() {
-            // Sort in descending order by comfort
-            public int compare(Car a, Car b) {
-                return b.comfort.ordinal() - a.comfort.ordinal();
+        // Calculate cost for each car
+        for (Car obj : carsList) {
+            obj.calculateTotalCost(rentalDays, mileage);
+        }
+
+        // We only care about the lowest cost car. However, there
+        //  could be multiple cars with the lowest cost. We should
+        //  make an array list with the lowest cost car(s)
+        ArrayList<Car> carsListCost = new ArrayList<Car>();
+        double lowestCost = carsList.get(0).totalCost;
+        for (Car obj : carsList) {
+            if (obj.totalCost == lowestCost) {
+                carsListCost.add(obj);
             }
-        });
+            else if (obj.totalCost < lowestCost) {
+                carsListCost.clear();
+                carsListCost.add(obj);
+            }
+        }
 
         // Like before, we only care about the most comfortable cars.
         //  There may be multiple so we must check.
         ArrayList<Car> finalCarsList = new ArrayList<Car>();
-        Car.Comfort prevComfort = carsList.get(0).comfort;
-        for (Car obj : carsList) {
-            if (prevComfort == obj.comfort) {
+        Car.Comfort highestComf = carsListCost.get(0).comfort;
+        for (Car obj : carsListCost) {
+            if (obj.comfort.ordinal() == highestComf.ordinal()) {
+                finalCarsList.add(obj);
+            }
+            else if (obj.comfort.ordinal() > highestComf.ordinal()) {
+                finalCarsList.clear();
                 finalCarsList.add(obj);
             }
         }
@@ -107,7 +100,7 @@ public class Main {
             System.out.printf("\nCar make: %s\n" +
                             "Car model: %s\n" +
                             "Passengers: %d\n" +
-                            "Total cost: %f\n\n",
+                            "Total cost: $%.2f\n\n",
                             obj.carMake, obj.carModel, obj.carPassengers, obj.totalCost);
         }
     }

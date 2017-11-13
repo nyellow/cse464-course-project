@@ -1,7 +1,3 @@
-
-
-import java.util.Comparator;
-
 public class Car {
 
     public enum Comfort {
@@ -33,7 +29,7 @@ public class Car {
     VehicleType vehicleType;
 
     public Car(Category carType, VehicleType vehicleType, String carMake, String carModel, double carMPG) {
-    		this.vehicleType = vehicleType;
+        this.vehicleType = vehicleType;
         this.carType = carType;
         this.carMake = carMake;
         this.carModel = carModel;
@@ -94,24 +90,4 @@ public class Car {
         	
         }
     }
-    
-    
-    
-      
-    //Calculate Mileage cost
-    public  int mileagecost(int mileage1, double MPG){
-      	int mileagecost1 = 0;
-      	double gascost=2.25;
-      	mileagecost1=(int) (mileage1 / MPG * 2.25);
-      	
-      	
-      	
-      	return mileagecost1;
-      	
-      	
-      }
-    
-    
-    
-    
 }
